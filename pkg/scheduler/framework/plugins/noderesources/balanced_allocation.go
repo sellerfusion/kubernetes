@@ -88,7 +88,7 @@ func NewBalancedAllocation(baArgs runtime.Object, h framework.Handle, fts featur
 		handle: h,
 		resourceAllocationScorer: resourceAllocationScorer{
 			Name:                BalancedAllocationName,
-			scorer:              balancedResourceScorer,
+			scorer:              most,
 			useRequested:        true,
 			resourceToWeightMap: resToWeightMap,
 		},
