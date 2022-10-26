@@ -52,7 +52,7 @@ var nodeResourceStrategyTypeMap = map[config.ScoringStrategyType]scorer{
 		resToWeightMap := resourcesToWeightMap(args.ScoringStrategy.Resources)
 		return &resourceAllocationScorer{
 			Name:                string(config.LeastAllocated),
-			scorer:              mostResourceScorer(resToWeightMap),
+			scorer:              leastResourceScorer(resToWeightMap),
 			resourceToWeightMap: resToWeightMap,
 		}
 	},
